@@ -1,4 +1,4 @@
-#Tue Apr 07 22:17:43 BRT 2020
-base.0=/home/rafael/Área de trabalho/vaii/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Thu Apr 09 20:21:14 BRT 2020
+base.0=/home/rafael/Área de trabalho/Projeto Flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
