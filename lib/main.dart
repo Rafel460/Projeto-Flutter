@@ -1,33 +1,37 @@
 import 'package:flutter/material.dart';
+
 void main(){
-  runApp(ProgramaBrabor());
-}
-void alertar(){
-  print('Teste 1,2');
+  runApp(ProjetoFlutter());
 }
 
-class ProgramaBrabor extends StatelessWidget{
+class ProjetoFlutter extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-        backgroundColor: Colors.grey, 
-        title:Text('Fala nerds, tranqs?', style: TextStyle(fontFamily: 'Verdana'),),
-        centerTitle: true,
+          backgroundColor: Colors.blue,
+          title: Text('Projeto Flutter'),
+          centerTitle: true,
+          actions: <Widget>[
+            PopupMenuButton(icon: Icon(Icons.menu),
+            itemBuilder: (context)=>[
+              /*Aqui vão as opções do Botão, cada
+              item PopupMenuItem possui um child */
+              PopupMenuItem(child: Text('Teste'),),
+              PopupMenuItem(child: Text('Teste 2'),),
+              PopupMenuItem(child: Text('Teste 3'),),
+            ],),
+          ],
         ),
         body: Center(
-          child: Column( //-> Cria um child com uma coluna de elementos!
-            children: <Widget>[ //Atributo com um array de widgets
-            Text('Peeeter Aqui', style: TextStyle(fontSize: 40.0,)),
-            FloatingActionButton(child: Icon(Icons.arrow_forward)),
-            
-          ],)
-          //child: 
-  
+          
         ),
-      ),
-      
+        persistentFooterButtons: <Widget>[
+         IconButton(icon: Icon(Icons.people_outline), onPressed: null),
+         IconButton(icon: Icon(Icons.new_releases), onPressed: null)
+        ],
+      )
     );
   }
 }
