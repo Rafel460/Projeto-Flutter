@@ -37,7 +37,9 @@ class _ProjetoFlutterState extends State<ProjetoFlutter> {
                ListTile(
                  title: Text("JoaozinhoGameplays RJ", style: TextStyle(color: Colors.white, fontSize: 15.0),),
                  subtitle: Text("joaozingameplais@brabor"),
-                 trailing: IconButton(icon: Icon(Icons.arrow_downward, size: 20, color: Colors.white),onPressed: (){print("oiiiii");},)
+                 trailing: IconButton(icon: Icon(Icons.arrow_downward, size: 20, color: Colors.white),onPressed: (){
+                   
+                 },)
                ),],
              ))
             ),
