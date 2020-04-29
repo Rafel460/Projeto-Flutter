@@ -3,6 +3,7 @@ import 'seguindo.dart';
 import 'novo_treco.dart';
 import 'chamada.dart';
 import 'algoritmo/exercicios_principal.dart';
+import 'login/login.dart';
 void main(){
   runApp(MaterialApp(home: ProjetoFlutter()));
 
@@ -32,12 +33,18 @@ class _ProjetoFlutterState extends State<ProjetoFlutter> {
                 Column(children:[
                  Row(
                  children: <Widget>[
-                 CircleAvatar(backgroundImage: NetworkImage("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ahnegao.com.br%2Fwp-content%2Fuploads%2F2017%2F01%2Fimg-19-1.jpg&f=1&nofb=1"),),
+                 CircleAvatar(backgroundImage: NetworkImage("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff5%2F9b%2F1b%2Ff59b1b0cc430702e82dea90780d7f87d.gif&f=1&nofb=1"),),
                ],),
                ListTile(
                  title: Text("JoaozinhoGameplays RJ", style: TextStyle(color: Colors.white, fontSize: 15.0),),
                  subtitle: Text("joaozingameplais@brabor"),
                  trailing: IconButton(icon: Icon(Icons.arrow_downward, size: 20, color: Colors.white),onPressed: (){
+                   setState((){
+                     Navigator.push(context,
+                    MaterialPageRoute(
+                      builder: (context) => Login()
+                      ));
+                   });
                    
                  },)
                ),],
