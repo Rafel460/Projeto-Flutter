@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vaii/main.dart';
+import 'cadastro.dart';
 class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
@@ -89,7 +90,13 @@ class _LoginState extends State<Login> {
                Row(
                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                  children: <Widget>[
-                   RaisedButton(child: Text("Cadastre-se"), color: Colors.purpleAccent, onPressed: (){},),
+                   RaisedButton(child: Text("Cadastre-se"), color: Colors.purpleAccent, onPressed: (){
+                     setState((){
+                       Navigator.push(context, MaterialPageRoute(
+                         builder: (context)=> Cadastro()
+                       ));
+                     });
+                   },),
                    RaisedButton(
                      child: Text("Entrar", style: TextStyle(color: Colors.white)),color: Colors.black, onPressed: (){
                        setState((){
